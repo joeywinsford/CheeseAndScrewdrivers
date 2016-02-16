@@ -2,11 +2,23 @@
 {
 	public class Cheese : ICartItem
 	{
-		public Cheese(decimal salePrice)
+		private readonly ExpiredDiscount _expiredDiscount;
+		private readonly decimal _salePrice;
+
+		public Cheese(decimal salePrice, ExpiredDiscount expiredDiscount = null)
 		{
-			SalePrice = salePrice;
+			_expiredDiscount = expiredDiscount;
+			_salePrice = salePrice;
 		}
 
-		public decimal SalePrice { get; }
+		public decimal SalePrice
+		{
+			get
+			{
+				if (_expiredDiscount != null)
+					return _salePrice*_expiredDiscount.Discount;
+				return _salePrice;
+			}
+		}
 	}
 }

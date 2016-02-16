@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CartWithCheeseAndScrewdrivers.cs" />
+    <Compile Include="CartWithExpiredCheese.cs" />
     <Compile Include="CartWithNoItems.cs" />
     <Compile Include="CartWithScrewdrivers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
