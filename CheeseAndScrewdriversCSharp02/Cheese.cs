@@ -1,8 +1,8 @@
 ﻿namespace CheeseAndScrewdriversCSharp02
 {
-	public class Screwdriver : ICartItem
+	public class Cheese : ICartItem
 	{
-		public Screwdriver(decimal salePrice)
+		public Cheese(decimal salePrice)
 		{
 			SalePrice = salePrice;
 		}

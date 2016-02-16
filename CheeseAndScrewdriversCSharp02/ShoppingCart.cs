@@ -4,13 +4,13 @@ namespace CheeseAndScrewdriversCSharp02
 {
 	public class ShoppingCart
 	{
-		private readonly Screwdriver[] _screwdrivers;
+		private readonly ICartItem[] _screwdrivers;
 
-		public ShoppingCart() : this(new Screwdriver[0])
+		public ShoppingCart() : this(new ICartItem[0])
 		{
 		}
 
-		public ShoppingCart(Screwdriver[] screwdrivers)
+		public ShoppingCart(ICartItem[] screwdrivers)
 		{
 			_screwdrivers = screwdrivers;
 		}

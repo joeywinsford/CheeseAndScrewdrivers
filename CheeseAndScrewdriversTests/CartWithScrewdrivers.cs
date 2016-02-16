@@ -10,7 +10,7 @@ namespace CheeseAndScrewdriversTests
 		{
 			const decimal salePrice = 25.0m;
 			var screwdriver = new Screwdriver(salePrice);
-			var cart = new ShoppingCart(new [] { screwdriver });
+			var cart = new ShoppingCart(new ICartItem[] { screwdriver });
 
 			Assert.Equal(salePrice, cart.SaleTotal);
 		}
@@ -21,7 +21,7 @@ namespace CheeseAndScrewdriversTests
 			var cheapDriver = new Screwdriver(5.0m);
 			var expensiveDriver = new Screwdriver(50.0m);
 
-			var cart = new ShoppingCart(new[] { cheapDriver, expensiveDriver });
+			var cart = new ShoppingCart(new ICartItem[] { cheapDriver, expensiveDriver });
 
 			Assert.Equal(cheapDriver.SalePrice + expensiveDriver.SalePrice, cart.SaleTotal);
 		}
