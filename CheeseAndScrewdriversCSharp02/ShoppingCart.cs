@@ -4,17 +4,17 @@ namespace CheeseAndScrewdriversCSharp02
 {
 	public class ShoppingCart
 	{
-		private readonly ICartItem[] _screwdrivers;
+		private readonly ICartItem[] _items;
 
 		public ShoppingCart() : this(new ICartItem[0])
 		{
 		}
 
-		public ShoppingCart(ICartItem[] screwdrivers)
+		public ShoppingCart(ICartItem[] items)
 		{
-			_screwdrivers = screwdrivers;
+			_items = items;
 		}
 
-		public decimal SaleTotal => _screwdrivers?.Sum(s => s.SalePrice) ?? 0.0m;
+		public decimal SaleTotal => _items?.Sum(s => s.SalePrice) ?? 0.0m;
 	}
 }

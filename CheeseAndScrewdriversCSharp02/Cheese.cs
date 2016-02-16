@@ -15,7 +15,7 @@
 		{
 			get
 			{
-				if (_expiredDiscount != null)
+				if (_expiredDiscount != null && _expiredDiscount.IsApplied())
 					return _salePrice*_expiredDiscount.Discount;
 				return _salePrice;
 			}
